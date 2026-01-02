@@ -79,14 +79,13 @@ git add .
 
 ```bash
 git commit -m "커밋 메시지"
-git commit --amend
+git commit --amend  # 직전 커밋에 수정해서 커밋하기
 ```
 
 ### 원격 저장소와 동기화
 
 ```bash
 git pull
-git pull --rebase
 git push
 ```
 
@@ -125,8 +124,8 @@ git stash pop
 ### 되돌리기
 
 ```bash
-git revert <commit>
-git reset --hard <commit>
+git revert <commit>  # 되돌린다는 의미를 담은 새로운 커밋을 추가함
+git reset --hard <commit>  # 진짜 커밋을 지우고 되돌림
 ```
 
 ### 원격 저장소 정보
@@ -146,7 +145,7 @@ git status
 git checkout -b
 git add .
 git commit -m
-git pull --rebase
+git pull
 git push
 ```
 
