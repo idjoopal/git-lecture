@@ -67,10 +67,6 @@ if __name__ == '__main__':
         }[args.model].load_from_checkpoint(checkpoint_path=tmp_ckpt_path)
         print(f'load historical_step: {model.num_historical_steps}')
 
-        # val_dataset = {
-        #     'argoverse_v2': ArgoverseV2Dataset,
-        # }[model.dataset](root=args.root, split='val',
-        #                 transform=TargetBuilder(model.num_historical_steps, model.num_future_steps))
         test_dataset = {
             'argoverse_v2': ArgoverseV2Dataset,
         }[model.dataset](root=args.root, split='val')
