@@ -74,3 +74,5 @@ if __name__ == '__main__':
                                 pin_memory=args.pin_memory, persistent_workers=args.persistent_workers)
         trainer = pl.Trainer(accelerator=args.accelerator, devices=args.devices, strategy='ddp')
         trainer.test(model, dataloader)
+
+        # 하하하 나는 데브다
